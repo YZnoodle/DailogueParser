@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://resource/bg_white.png" type="Texture" id=2]
+[ext_resource path="res://resource/cat.PNG" type="Texture" id=3]
+[ext_resource path="res://parser.gd" type="Script" id=4]
+
+[node name="main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 80, 60 )
+texture = ExtResource( 2 )
+
+[node name="gui" type="CanvasLayer" parent="."]
+
+[node name="screen" type="MarginContainer" parent="gui"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 5.0
+margin_right = -10.0
+margin_bottom = -5.0
+
+[node name="screen_content" type="VBoxContainer" parent="gui/screen"]
+margin_right = 140.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="dynamic_content" type="HBoxContainer" parent="gui/screen/screen_content"]
+margin_right = 140.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 3
+
+[node name="cat_box" type="MarginContainer" parent="gui/screen/screen_content/dynamic_content"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 0 )
+
+[node name="cat" type="Sprite" parent="gui/screen/screen_content/dynamic_content/cat_box"]
+position = Vector2( 33.9173, 45.3169 )
+texture = ExtResource( 3 )
+
+[node name="prompt" type="Button" parent="gui/screen/screen_content"]
+margin_top = 88.0
+margin_right = 140.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Hello there"
+
+[node name="parser" type="Node" parent="."]
+script = ExtResource( 4 )

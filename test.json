@@ -1,0 +1,41 @@
+{
+  "start": {
+    "call": ["optional_method"],
+    "dialogues": [
+      {"text": "Hello"},
+      {
+        "text": "How are you?",
+        "options": [
+          {"text": "good"},
+          {"text": "bad"}
+        ]
+      }
+    ],
+    "next_blocks": ["a1", "a2"],
+    "is_final": false
+  },
+  "a1": {
+    "call": ["optional_method"],
+    "dialogues": [
+      {"text": "Good to hear"}
+    ],
+    "next_blocks": ["end"],
+    "is_final": false
+  },
+  "a2": {
+    "call": ["optional_method"],
+    "dialogues": [
+      {"text": "Ok"}
+    ],
+    "next_blocks": ["end"],
+    "is_final": false
+  },
+  "end": {
+    "call": ["optional_method"],
+    "dialogues": [
+      {"text": "Bye"}
+    ],
+    "next_blocks": ["start"],
+    "is_final": false
+  }
+}
