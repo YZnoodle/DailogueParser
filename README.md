@@ -4,10 +4,8 @@ This dialogue manager created in Godot is reusable and allows quick creation of 
 <img src="https://github.com/YZnoodle/DailogueParser/blob/master/resource/DialogueDemo.gif" width="400" />
 
 **How to use**  
-At the start of the game:  
 1. Instance a dialogue manager  
 2. Add dialogue manager to tree  
-At a conversation:  
 3. Call dialogue manager with the conversation’s json file path  
 4. (Optional) If there are method calls associated with options, a signal call_emitted() will be emitted, first argument is a string of the method name. Method need to be handled outside the dialogue manager.  
 Then user clicks and clicks until conversation is over…  
