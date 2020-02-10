@@ -1,7 +1,7 @@
 # Godot json dialogue parser
 This dialogue manager created in Godot is reusable and allows quick creation of mini games.
 
-<img src="https://github.com/YZnoodle/MiniPCTemplate/blob/master/resource/DialogueDemo.gif" width="400" />
+<img src="https://github.com/YZnoodle/DailogueParser/blob/master/resource/DialogueDemo.gif" width="400" />
 
 **How to use**  
 At the start of the game:  
