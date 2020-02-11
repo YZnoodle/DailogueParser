@@ -49,6 +49,7 @@ func display_option_button(option:Dictionary):
 	var l = Button.new()
 	l.set_v_size_flags(3)
 	l.set_text(option.text)
+	l.set_focus_mode(0)
 	var button_pos = dynamic_content_node.get_node("option_labels_container").get_child_count()
 	l.set_name("button"+str(button_pos))
 	dynamic_content_node.get_node("option_labels_container").add_child(l)
